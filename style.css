@@ -1,0 +1,78 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrap {
+    height: 100%;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'firstWrap firstWrap firstWrap'
+    'second third fourth'
+    'fifth third fourth'
+    'sixth sixth fourth';
+}
+
+
+
+.first {
+    background: #1e67ba;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    grid-area: firstWrap;
+}
+
+.first .item {
+    width: 100px;
+    height: 20px;
+    background: aliceblue;
+}
+
+
+
+.fourth {
+    background: #e195a2;
+    grid-area: fourth;
+}
+
+
+.second, .fifth {
+    background: #e195a2;
+    grid-area: second;
+}
+
+
+.fifth {
+    background: #4474aa;
+    grid-area: fifth;
+}
+
+.sixth {
+    background: #1e67ba;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    grid-area: sixth;
+}
+
+.sixth .item {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 100px;
+    height: 20px;
+    background: aliceblue;
+}
+
+.third {
+    width: 100%;
+    background: #bfbcbc;
+    grid-area: third;
+}
